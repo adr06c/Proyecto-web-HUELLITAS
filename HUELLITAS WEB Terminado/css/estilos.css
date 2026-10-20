@@ -1,0 +1,360 @@
+/* HUELLITAS - Diseño y Desarrollo Web */
+
+
+/* =========================
+   VARIABLES CSS
+   ========================= */
+
+:root {
+    --principal: #8B5E3C;
+    --secundario: #D99A5B;
+    --crema: #FFF8EF;
+    --blanco: #FFFFFF;
+    --texto: #333333;
+    --texto-claro: #666666;
+    --verde: #6F8F72;
+    --sombra: 0 5px 15px rgba(0, 0, 0, 0.12);
+    --radio: 15px;
+}
+
+
+/* =========================
+   CONFIGURACIÓN GENERAL
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--texto);
+    background-color: var(--crema);
+    line-height: 1.6;
+}
+
+
+/* =========================
+   ENCABEZADOS Y PÁRRAFOS
+   ========================= */
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--blanco);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--principal);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 21px;
+    font-weight: 600;
+    color: var(--principal);
+    margin-bottom: 8px;
+}
+
+p {
+    font-size: 16px;
+    color: var(--texto-claro);
+}
+
+
+/* =========================
+   SECCIÓN INICIO
+   ========================= */
+
+#inicio {
+    min-height: 550px;
+    padding: 80px 30px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        rgba(40, 25, 15, 0.75),
+        rgba(40, 25, 15, 0.75)
+    ),
+    url('../imagenes/nosotros.jpg');
+
+    background-size: cover;
+    background-position: center;
+}
+
+#inicio .hero-caja {
+    background-color: rgba(0, 0, 0, 0.35);
+    padding: 40px 35px;
+    border-radius: var(--radio);
+    max-width: 700px;
+}
+
+#inicio h1 {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+#inicio h2 {
+    color: var(--blanco);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+#inicio p {
+    color: var(--blanco);
+    font-size: 19px;
+}
+
+#inicio .boton {
+    margin-top: 20px;
+}
+
+
+/* =========================
+   SECCIÓN NOSOTROS
+   ========================= */
+
+#nosotros {
+    background-color: var(--blanco);
+    padding: 70px 30px;
+}
+
+#nosotros img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 20px auto;
+
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+
+/* =========================
+   SECCIÓN PRODUCTOS
+   ========================= */
+
+#productos {
+    padding: 70px 30px;
+    background-color: var(--crema);
+    text-align: center;
+}
+
+#productos h2 {
+    margin-bottom: 15px;
+}
+
+#productos > p {
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   CONTENEDOR DE PRODUCTOS
+   ========================= */
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+
+    width: 100%;
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   PRODUCTOS
+   ========================= */
+
+.producto {
+    flex: 1;
+    min-width: 260px;
+    max-width: 350px;
+
+    padding: 20px;
+    margin: 10px;
+
+    background-color: var(--blanco);
+
+    border: 1px solid #eee;
+    border-style: solid;
+    border-radius: var(--radio);
+
+    box-shadow: var(--sombra);
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================
+   IMÁGENES DE PRODUCTOS
+   ========================= */
+
+.producto img {
+    width: 200px;
+    height: 180px;
+
+    object-fit: contain;
+
+    display: block;
+    margin: 0 auto 15px;
+}
+
+
+/* =========================
+   TEXTO DE PRODUCTOS
+   ========================= */
+
+.producto h3 {
+    margin-top: 10px;
+}
+
+.producto p {
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   ICONOS
+   ========================= */
+
+.producto i {
+    color: var(--secundario);
+}
+
+.icono {
+    color: var(--secundario);
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+
+/* =========================
+   PRECIO
+   ========================= */
+
+.precio {
+    color: var(--verde);
+    font-size: 21px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   SECCIÓN CONTACTO
+   ========================= */
+
+#contacto {
+    background-color: var(--blanco);
+    padding: 70px 30px;
+}
+
+#contacto p {
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   BOTONES
+   ========================= */
+
+.boton {
+    display: inline-block;
+
+    padding: 12px 28px;
+
+    background-color: var(--secundario);
+    color: var(--blanco);
+
+    text-decoration: none;
+    font-weight: 600;
+
+    border-radius: 30px;
+    border: 2px solid var(--secundario);
+
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: var(--principal);
+    border-color: var(--principal);
+    transform: translateY(-3px);
+}
+
+.boton i {
+    color: var(--blanco);
+}
+
+
+/* =========================
+   DISEÑO RESPONSIVO
+   TABLET
+   ========================= */
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+
+    #inicio {
+        min-height: 500px;
+        padding: 60px 20px;
+    }
+
+    .producto {
+        max-width: 45%;
+    }
+}
+
+
+/* =========================
+   DISEÑO RESPONSIVO
+   CELULAR
+   ========================= */
+
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    #inicio, #nosotros, #productos, #contacto {
+        padding: 50px 20px;
+    }
+
+    .producto {
+        max-width: 100%;
+        min-width: 100%;
+    }
+}
