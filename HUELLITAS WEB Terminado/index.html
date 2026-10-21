@@ -195,3 +195,98 @@
 </body>
 
 </html>
+
+    <!-- MOTOR DE BUSQUEDA -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUELLITAS | Menú de navegación</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="encabezado" id="inicio">
+        <a class="marca" href="#inicio" aria-label="Huellitas, ir al inicio">
+            <span class="icono-marca" aria-hidden="true">🐾</span>
+            <span>HUELLITAS</span>
+        </a>
+
+        <nav class="navegacion" aria-label="Menú principal">
+            <ul class="menu">
+                <li><a class="enlace-menu activo" href="#inicio">Inicio</a></li>
+                <li><a class="enlace-menu" href="#nosotros">Nosotros</a></li>
+                <li class="tiene-submenu">
+                    <a class="enlace-menu" href="#productos" aria-haspopup="true">Productos <span class="flecha">▾</span></a>
+                    <ul class="submenu">
+                        <li><a href="#collares">Collares</a></li>
+                        <li><a href="#camas">Camas</a></li>
+                        <li><a href="#juguetes">Juguetes</a></li>
+                    </ul>
+                </li>
+                <li><a class="enlace-menu" href="#consejos">Consejos</a></li>
+                <li><a class="enlace-menu" href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="titulo-principal">
+            <div class="hero-contenido">
+                <p class="etiqueta">Todo para tus mejores amigos</p>
+                <h1 id="titulo-principal">Bienvenido a <span>Huellitas</span></h1>
+                <p>Accesorios, comodidad y diversión para consentir a tus mascotas.</p>
+                <a class="boton" href="#productos">Explorar productos</a>
+            </div>
+            <div class="huella-decorativa" aria-hidden="true">🐾</div>
+        </section>
+
+        <section class="seccion" id="nosotros">
+            <p class="etiqueta">Quiénes somos</p>
+            <h2>Amor y cuidado en cada detalle</h2>
+            <p>En Huellitas buscamos productos prácticos y cómodos para que cada mascota se sienta parte de la familia.</p>
+        </section>
+
+        <section class="seccion productos" id="productos">
+            <p class="etiqueta">Nuestro catálogo</p>
+            <h2>Productos destacados</h2>
+            <div class="tarjetas">
+                <article class="tarjeta" id="collares">
+                    <div class="ilustracion">🦮</div>
+                    <h3>Collares</h3>
+                    <p>Accesorios para paseos seguros y con estilo.</p>
+                </article>
+                <article class="tarjeta" id="camas">
+                    <div class="ilustracion">🛏️</div>
+                    <h3>Camas</h3>
+                    <p>Un lugar cómodo para descansar.</p>
+                </article>
+                <article class="tarjeta" id="juguetes">
+                    <div class="ilustracion">🎾</div>
+                    <h3>Juguetes</h3>
+                    <p>Opciones para jugar y mantenerse activos.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="seccion consejos" id="consejos">
+            <p class="etiqueta">Bienestar animal</p>
+            <h2>Consejos para tu mascota</h2>
+            <p>Elige productos adecuados para su tamaño, revisa los accesorios con frecuencia y dedica tiempo diario al juego.</p>
+        </section>
+
+        <section class="seccion contacto" id="contacto">
+            <p class="etiqueta">Estamos para ayudarte</p>
+            <h2>Contáctanos</h2>
+            <p>¿Tienes alguna consulta? Escríbenos y te ayudaremos a elegir lo mejor para tu mascota.</p>
+            <a class="boton boton-claro" href="mailto:contacto@huellitas.example">Enviar correo</a>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>© 2026 HUELLITAS · Hecho con amor para las mascotas 🐾</p>
+    </footer>
+</body>
+</html>
+
