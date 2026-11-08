@@ -1,7 +1,6 @@
 /* HUELLITAS - Diseño y Desarrollo Web
 
-
-/* ===================
+/* =========================
    VARIABLES CSS
    ========================= */
 
@@ -18,7 +17,7 @@
 }
 
 
-/* ======================
+/* =========================
    CONFIGURACIÓN GENERAL
    ========================= */
 
@@ -51,8 +50,8 @@ p {
 }
 
 
-/* ======================
-   ENCABEZADO
+/* =========================
+   ENCABEZADO (position + z-index)
    ========================= */
 
 #encabezado {
@@ -80,7 +79,7 @@ p {
 }
 
 
-/* ====================
+/* =========================
    MENÚ DE NAVEGACIÓN
    ========================= */
 
@@ -105,8 +104,9 @@ p {
 }
 
 
-/* ======================
-   SUBMENÚ
+/* =========================
+   SUBMENÚ DESPLEGABLE
+   (position, z-index, visibility, opacity, transition, transform)
    ========================= */
 
 .menu-desplegable {
@@ -153,7 +153,7 @@ p {
 }
 
 
-/* =====================
+/* =========================
    SECCIÓN INICIO
    ========================= */
 
@@ -170,7 +170,7 @@ p {
         rgba(40, 25, 15, 0.75),
         rgba(40, 25, 15, 0.75)
     ),
-    url('../imagenes/nosotros.jpg');
+    url('../media/img/nosotros.jpg');
 
     background-size: cover;
     background-position: center;
@@ -207,7 +207,7 @@ p {
 }
 
 
-/* ======================
+/* =========================
    SECCIÓN NOSOTROS
    ========================= */
 
@@ -247,7 +247,7 @@ p {
 }
 
 
-/* ======================
+/* =========================
    SECCIÓN PRODUCTOS
    ========================= */
 
@@ -310,7 +310,7 @@ p {
     display: block;
     margin: 0 auto 15px;
 
-
+    /* Colores vivos por defecto; al pasar el mouse se realzan */
     filter: saturate(1) brightness(1);
     transition: filter 0.35s ease, transform 0.35s ease;
 }
@@ -336,7 +336,7 @@ p {
 }
 
 
-/* =====================
+/* =========================
    SECCIÓN VIDEO
    ========================= */
 
@@ -379,7 +379,7 @@ p {
 }
 
 
-/* =====================
+/* =========================
    SECCIÓN CONTACTO
    ========================= */
 
@@ -439,7 +439,7 @@ p {
 }
 
 
-/* ======================
+/* =========================
    BOTÓN
    ========================= */
 
@@ -485,53 +485,58 @@ footer a {
 }
 
 
+/* =========================
+   DISEÑO RESPONSIVO - TABLET
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .menu {
+        gap: 16px;
+        font-size: 14px;
+    }
+
+    #inicio h1 {
+        font-size: 36px;
+    }
+
+    #inicio {
+        min-height: 500px;
+        padding: 60px 20px;
+    }
+
+    .producto {
+        max-width: 45%;
+    }
+}
 
 
 /* =========================
-   SECCIÓN VIDEOS
+   DISEÑO RESPONSIVO - CELULAR
    ========================= */
 
-.seccion {
-    padding: 70px 30px;
-    background-color: var(--blanco);
-    text-align: center;
-}
+@media (max-width: 500px) {
 
-.seccion h2 {
-    color: var(--principal);
-    margin-bottom: 30px;
-}
+    #encabezado {
+        flex-direction: column;
+        gap: 12px;
+    }
 
-.tarjetas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-    max-width: 1200px;
-    margin: 0 auto;
-}
+    #inicio h1 {
+        font-size: 30px;
+    }
 
-.tarjeta {
-    flex: 0 1 220px;
-    max-width: 220px;
+    #inicio, #nosotros, #productos, #video, #contacto {
+        padding: 50px 20px;
+    }
 
-    background-color: var(--blanco);
-    border-radius: var(--radio);
-    box-shadow: var(--sombra);
-    overflow: hidden;
-}
-
-.tarjeta-horizontal {
-    flex-basis: 100%;
-    max-width: 700px;
-}
-
-.video-responsive {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: 390px;
-    object-fit: contain;
-    background-color: #000;
+    .producto {
+        max-width: 100%;
+        min-width: 100%;
+    }
 }
