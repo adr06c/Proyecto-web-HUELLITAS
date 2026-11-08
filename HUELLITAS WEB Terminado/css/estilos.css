@@ -438,6 +438,93 @@ p {
     transform: translateY(-4px) rotate(-6deg);
 }
 
+#contacto > p:last-of-type {
+    color: var(--principal);
+    font-weight: 600;
+}
+
+/* /* =========================
+   UBICACIÓN DEL NEGOCIO (mapa responsive)
+   ========================= */
+
+/* CSS Grid: dirección a la izquierda, mapa a la derecha */
+.ubicacion {
+    max-width: 900px;
+    margin: 35px auto 40px;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 30px;
+    align-items: center;
+}
+
+.ubicacion h3 {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+    color: var(--principal);
+    margin-bottom: 8px;
+}
+
+.ubicacion address {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+    font-style: normal;
+    color: var(--texto-claro);
+}
+
+/* Pseudoelemento: ícono antes de la dirección */
+.ubicacion address::before {
+    content: "📍 ";
+}
+
+/* Contenedor que mantiene la proporción y se adapta al ancho */
+.mapa {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radio);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+/* Selector por atributo: iframes que cargan Google Maps */
+.mapa iframe[src*="google.com/maps"] {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .ubicacion {
+        grid-template-columns: 1fr;
+    }
+
+    .ubicacion h3,
+    .ubicacion address,
+    .mapa {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .ubicacion address {
+        margin-bottom: 18px;
+    }
+
+    .mapa {
+        aspect-ratio: 4 / 3;
+    }
+}
+
+@media (max-width: 500px) {
+    .mapa {
+        aspect-ratio: 1 / 1;
+    }
+}
 
 /* =========================
    BOTÓN
@@ -482,6 +569,10 @@ footer {
 footer a {
     color: var(--crema);
     text-decoration: underline;
+}
+
+footer p {
+    color: var(--crema);
 }
 
 
