@@ -443,6 +443,52 @@ p {
     font-weight: 600;
 }
 
+
+/* FORMULARIO DE CONTACTO */
+
+#formulario-contacto {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+#formulario-contacto h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#formulario-contacto label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#formulario-contacto input,
+#formulario-contacto select,
+#formulario-contacto textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+#formulario-contacto button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: var(--verde);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
 /* /* =========================
    UBICACIÓN DEL NEGOCIO (mapa responsive)
    ========================= */
